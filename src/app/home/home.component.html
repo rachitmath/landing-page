@@ -1,0 +1,138 @@
+<section id="banner">
+    <div class="banner-img-box">
+        <img src="../../assets/collage.png" alt="">
+    </div>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="heading text-center">
+                    <h2>Welcome to Abc Wrap</h2>
+                </div>
+                <div class="content text-center">
+                    <p>For contractors, project owners, and developers, Abc is the market leader in owner and contractor
+                        wrap-up programs as well as wrap up bonding and other home building insurance products and risk
+                        assessment services.
+                        We field the largest and most trusted network of construction experts anywhere in the world - a
+                        team of professionals covering every major sector of the industry.</p>
+                </div>
+                <div class="img-box text-center">
+                    <img src="../../assets/Scroller.png" alt="scroller">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about-us">
+    <div class="d-flex justify-content-around align-items-center">
+        <div class="links-box w-100">
+            <hr>
+            <div class="img-box">
+                <img src="../../assets/abc-links-img.png" alt="">
+            </div>
+            <div class="content-block d-flex flex-row justify-content-around align-items-center">
+                <div class="p-2 bd-highlight text-center">
+                    <span>
+                        <img src="../../assets/dolor.svg" alt="">
+                        <span class="ml-2">
+                            Wrap up 101
+                        </span>
+                    </span>
+
+                </div>
+                <div class="p-2 bd-highlight text-center">
+                    <span>
+                        <img src="../../assets/dolor.svg" alt="">
+                        <span class="ml-2">
+                            Wrap up 101
+                        </span>
+                    </span>
+                </div>
+                <div class="p-2 bd-highlight text-center">
+                    <span>
+                        <img src="../../assets/dolor.svg" alt="">
+                        <span class="ml-2">
+                            Wrap up 101
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="login-form w-100">
+            <div class="img-box text-center mb-2">
+                <img src="../../assets/logo.png" alt="">
+            </div>
+            <form class="w-50" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <h2 class="text-white text-center">LOGIN</h2>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        formControlName="email" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                    <div *ngIf="submitted && f.email.errors" class="alert alert-danger">
+                        <div *ngIf="f.email.errors.required">
+                            Email is required.
+                        </div>
+                        <div *ngIf="f.email.errors.email">
+                            Email is invalid.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"
+                        placeholder="Enter password">
+                    <div *ngIf="submitted && f.password.errors" class="alert alert-danger">
+                        <div *ngIf="f.password.errors.required">
+                            Password is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="button-box text-right">
+                    <button type="button" class="btn btn-link text-white mr-2">Forgot your password? </button>
+                    <button type="submit" class="btn btn-info">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="industry">
+    <div class="heading text-center">
+        <h2>Industry Links</h2>
+        <hr>
+    </div>
+    <div class="row w-100">
+        <div class="col-lg-3" *ngFor="let industry of industries">
+            <div class="img-box text-center shadow-sm p-3 mb-5 bg-white rounded">
+                <img src="../../assets/{{industry.src}}" id="{{industry.id}}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="highlights">
+    <div class="d-flex justify-content-around">
+        <div class="insights-box w-100">
+            <h2 class="heading mb-5">Professional Insights</h2>
+            <div class="img-box text-center">
+                <img src="../../assets/covid19.png" alt="">
+            </div>
+        </div>
+        <div class="news-box w-100">
+            <h2 class="heading">News and Highlights</h2>
+
+            <ul class="links-list mt-5">
+                <li class="link">
+                    <a href="">2020 April Wrap Up Market Update - Contract</a>
+                </li>
+                <li class="link">
+                    <a href="">SDI COVID-19</a>
+                </li>
+                <li class="link">
+                    <a href="">Wrap Up Market Update</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</section>
